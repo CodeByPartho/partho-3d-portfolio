@@ -8,7 +8,7 @@
   opacity: 1;
   height: auto;
   margin: auto;
-  margin-bottom: 250px;
+  margin-bottom: 60px;
   padding: 120px 0px;
 }
 
@@ -63,6 +63,7 @@
   margin: 0;
   font-weight: 500;
   line-height: 45px;
+  white-space: nowrap;
 }
 
 .education-info h4 {

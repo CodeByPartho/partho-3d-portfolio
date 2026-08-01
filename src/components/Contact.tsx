@@ -29,6 +29,26 @@ const Contact = () => {
                 Facebook — Dokumosi
               </a>
             </p>
+            <p>
+              <a
+                href="mailto:parthosarothipaik@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="disable"
+              >
+                Email — parthosarothipaik@gmail.com
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://wa.me/8801533324840"
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="disable"
+              >
+                WhatsApp — +8801533324840
+              </a>
+            </p>
             <h4>Education</h4>
             <p>
               BBA (Finance & Banking), Tejgaon College — Current

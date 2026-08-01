@@ -30,7 +30,7 @@ const Education = () => {
                 <h4>Higher Secondary Certificate (HSC)</h4>
                 <h5>Uttara Government College</h5>
               </div>
-              <h3>2024–25</h3>
+              <h3>2024 – 2025</h3>
             </div>
             <p>
               Completed HSC in Business Studies with a GPA of 3.17.
@@ -42,7 +42,7 @@ const Education = () => {
                 <h4>Secondary School Certificate (SSC)</h4>
                 <h5>Uttara High School and College</h5>
               </div>
-              <h3>2016–23</h3>
+              <h3>2022 – 2023</h3>
             </div>
             <p>
               Completed SSC with a GPA of 4.56, building strong foundations in

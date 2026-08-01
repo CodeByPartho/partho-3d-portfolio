@@ -42,6 +42,23 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  position: relative;
+}
+
+/* Per-item glowing dot on the timeline */
+.career-item-dot {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #14b8a6;
+  box-shadow: 0 0 5px 2px #67e8f9, 0 0 15px 6px #5eead4;
+  opacity: 0.15;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
 .career-info-box p {
@@ -63,6 +80,7 @@
   margin: 0;
   font-weight: 500;
   line-height: 45px;
+  white-space: nowrap;
 }
 
 .career-info h4 {
@@ -203,6 +221,10 @@
     left: 0%;
   }
 
+  .career-item-dot {
+    left: 0%;
+  }
+
   .career-container {
     width: calc(100% - 25px);
   }
@@ -235,7 +257,7 @@
 
   .career-section {
     padding-top: 90px;
-    margin-top: -70px;
+    margin-top: -30px;
 
     align-items: start;
     place-items: inherit;
