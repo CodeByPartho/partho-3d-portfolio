@@ -55,11 +55,6 @@ const Scene = () => {
         metalness: 0.2,
         roughness: 0.3,
       });
-      const matSkin = new THREE.MeshStandardMaterial({
-        color: 0x9a7b5c,
-        roughness: 0.8,
-        metalness: 0.05,
-      });
 
       // --- Torso ---
       const torso = new THREE.Mesh(new THREE.CylinderGeometry(1.15, 0.95, 3.2, 24), matBody);
