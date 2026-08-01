@@ -171,6 +171,12 @@ export function setAllTimeline() {
         duration: 0.1,
       },
       0
+    )
+    .fromTo(
+      ".career-item-dot",
+      { opacity: 0.15 },
+      { opacity: 1, stagger: 0.15, duration: 0.4 },
+      0
     );
 
   if (window.innerWidth > 1024) {

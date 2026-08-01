@@ -7,7 +7,7 @@ const About = () => {
         <h3 className="title">About Me</h3>
         <p className="para">
           I'm a motivated learner from Dhaka, currently studying Finance & Banking
-          at Tejgaon College. I love combining creativity with structure — building
+          at Tejgaon College. I love combining creativity with structure: building
           clean web experiences, designing brand identities, and helping teams stay
           organized through reliable execution.
         </p>
