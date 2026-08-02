@@ -53,9 +53,9 @@
 
 .education-info-in {
   display: flex;
-  width: 55%;
+  width: 42%;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
 }
 
 .education-info h3 {
@@ -67,9 +67,9 @@
 }
 
 .education-info h4 {
-  font-size: 24px;
-  line-height: 30px;
-  letter-spacing: 0.8px;
+  font-size: 19px;
+  line-height: 26px;
+  letter-spacing: 0.6px;
   font-weight: 500;
   margin: 0;
   display: inline;
@@ -77,7 +77,8 @@
 
 .education-info h4 + h5 {
   display: inline;
-  margin-left: 10px;
+  margin-left: 8px;
+  font-size: 16px;
 }
 
 .education-info h5 {

@@ -143,44 +143,6 @@ const WhatIDo = () => {
               <div className="what-arrow"></div>
             </div>
           </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 2)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-            <div className="what-content-in">
-              <h3>BRANDING &amp; CONTENT</h3>
-              <h4>Brand Identity, SEO &amp; Marketing</h4>
-              <p>
-                Designing brand identities, optimizing content for search, and
-                running email marketing campaigns — helping businesses look
-                professional and get found online.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">Brand identity</div>
-                <div className="what-tags">Logo design</div>
-                <div className="what-tags">SEO</div>
-                <div className="what-tags">Email marketing</div>
-                <div className="what-tags">MS Word / Docs</div>
-                <div className="what-tags">MS Excel / Sheets</div>
-              </div>
-              <div className="what-arrow"></div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
