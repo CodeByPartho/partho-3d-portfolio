@@ -57,7 +57,7 @@ const Contact = () => {
               HSC, Uttara Government College — 2024–2025 (GPA 3.17)
             </p>
             <p>
-              SSC, Uttara High School and College — 2016–2023 (GPA 4.56)
+              SSC, Uttara High School and College — 2022–2023 (GPA 4.56)
             </p>
           </div>
           <div className="contact-box">
