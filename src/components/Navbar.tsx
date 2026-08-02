@@ -52,7 +52,7 @@ const Navbar = () => {
           target="_blank"
           rel="noreferrer"
         >
-          GitHub
+          <HoverLinks text="GITHUB" />
         </a>
         <ul>
           <li>
