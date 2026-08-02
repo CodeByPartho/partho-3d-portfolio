@@ -178,4 +178,34 @@ export function setAllTimeline() {
       0
     );
   }
+
+  // ===== Education glowing timeline (same as career) =====
+  const educationTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".education-section",
+      start: "top 40%",
+      end: "100% center",
+      scrub: true,
+      invalidateOnRefresh: true,
+    },
+  });
+  educationTimeline
+    .fromTo(
+      ".education-timeline",
+      { maxHeight: "10%" },
+      { maxHeight: "100%", duration: 0.5 },
+      0
+    )
+    .fromTo(
+      ".education-timeline",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.1 },
+      0
+    )
+    .fromTo(
+      ".education-info-box",
+      { opacity: 0 },
+      { opacity: 1, stagger: 0.1, duration: 0.5 },
+      0
+    );
 }
