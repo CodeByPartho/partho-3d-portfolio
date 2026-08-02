@@ -59,7 +59,7 @@
 }
 
 .education-info h3 {
-  font-size: 48px;
+  font-size: 36px;
   margin: 0;
   font-weight: 500;
   line-height: 45px;
@@ -72,12 +72,6 @@
   letter-spacing: 0.8px;
   font-weight: 500;
   margin: 0;
-  display: inline;
-}
-
-.education-info h4 + h5 {
-  display: inline;
-  margin-left: 12px;
 }
 
 .education-info h5 {

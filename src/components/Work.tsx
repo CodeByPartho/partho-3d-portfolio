@@ -8,14 +8,14 @@ const projects = [
     title: "SOS App",
     category: "Emergency Help Web App",
     tools: "SOS Alerts, Location Sharing, Emergency Contacts, Web App",
-    image: "/images/sos-app.jpg",
+    image: "/images/portfolio-web.jpg",
     link: "https://sos-app-by-partho.netlify.app/",
   },
   {
     title: "First Portfolio Web",
     category: "Personal Portfolio Website",
     tools: "HTML, CSS, JavaScript, Responsive Design, Netlify",
-    image: "/images/portfolio-web.jpg",
+    image: "/images/sos-app.jpg",
     link: "https://portfolio-of-partho-paik.netlify.app/",
   },
 ];
