@@ -162,22 +162,12 @@ export function setAllTimeline() {
       { opacity: 1, stagger: 0.1, duration: 0.5 },
       0
     )
-    .fromTo(
-      ".career-dot",
-      { animationIterationCount: "infinite" },
-      {
-        animationIterationCount: "1",
-        delay: 0.3,
-        duration: 0.1,
-      },
-      0
-    );
 
   if (window.innerWidth > 1024) {
     careerTimeline.fromTo(
       ".career-section",
       { y: 0 },
-      { y: "20%", duration: 0.5, delay: 0.2 },
+      { y: "5%", duration: 0.5, delay: 0.2 },
       0
     );
   } else {
