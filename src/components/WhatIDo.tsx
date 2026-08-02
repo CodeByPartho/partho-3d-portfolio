@@ -113,15 +113,6 @@ const WhatIDo = () => {
               <svg height="100%">
                 <line
                   x1="0"
-                  y1="0"
-                  x2="100%"
-                  y2="0"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-                <line
-                  x1="0"
                   y1="100%"
                   x2="100%"
                   y2="100%"
@@ -158,15 +149,6 @@ const WhatIDo = () => {
           >
             <div className="what-border1">
               <svg height="100%">
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="100%"
-                  y2="0"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
                 <line
                   x1="0"
                   y1="100%"
