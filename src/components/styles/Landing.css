@@ -226,6 +226,7 @@
   flex-wrap: nowrap;
   text-transform: uppercase;
   letter-spacing: 2px;
+  overflow: visible;
 }
 
 .landing-h2-info-1 {
