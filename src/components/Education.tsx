@@ -17,7 +17,7 @@ const Education = () => {
                 <h4>BBA — Finance & Banking</h4>
                 <h5>Tejgaon College</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2025 – NOW</h3>
             </div>
             <p>
               Currently pursuing a Bachelor of Business Administration with a
