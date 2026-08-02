@@ -8,8 +8,7 @@
   opacity: 1;
   height: auto;
   margin: auto;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 250px;
   padding: 120px 0px;
 }
 
@@ -60,11 +59,10 @@
 }
 
 .career-info h3 {
-  font-size: 36px;
+  font-size: 48px;
   margin: 0;
   font-weight: 500;
   line-height: 45px;
-  white-space: nowrap;
 }
 
 .career-info h4 {
@@ -87,7 +85,7 @@
 .career-timeline {
   position: absolute;
   top: -50px;
-  left: 53%;
+  left: 50%;
   transform: translateX(-50%);
   width: 3px;
   height: 100%;
@@ -101,7 +99,7 @@
 .career-dot {
   position: absolute;
   bottom: 0;
-  left: 53%;
+  left: 50%;
   transform: translate(-50%, 50%);
   background-color: #14b8a6;
   width: 10px;
@@ -181,8 +179,8 @@
 @media only screen and (max-width: 1025px) {
   .career-section {
     padding: 70px 0px;
-    padding-top: 60px;
-    margin-top: -30px;
+    padding-top: 220px;
+    margin-top: -200px;
     margin-bottom: 0;
   }
 }
@@ -237,7 +235,7 @@
 
   .career-section {
     padding-top: 90px;
-    margin-top: -30px;
+    margin-top: -70px;
 
     align-items: start;
     place-items: inherit;

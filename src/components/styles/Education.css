@@ -8,8 +8,9 @@
   opacity: 1;
   height: auto;
   margin: auto;
+  margin-top: 40px;
   margin-bottom: 60px;
-  padding: 40px 0px 60px;
+  padding: 120px 0px;
 }
 
 .education-section h2 {
@@ -158,11 +159,11 @@
   .education-info h4 {
     font-size: 22px;
     line-height: 24px;
+    width: 180px;
   }
 
   .education-info h5 {
     font-size: 17px;
-    display: inline;
   }
 
   .education-info h3 {
