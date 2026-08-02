@@ -172,36 +172,7 @@ export function setAllTimeline() {
       },
       0
     )
-    .fromTo(
-      ".career-item-dot",
-      { opacity: 0.12 },
-      { opacity: 1, duration: 0.3 },
-      0.05
-    )
-    .fromTo(
-      ".career-item-dot",
-      { opacity: 0.12 },
-      { opacity: 1, duration: 0.3 },
-      0.25
-    )
-    .fromTo(
-      ".career-item-dot",
-      { opacity: 0.12 },
-      { opacity: 1, duration: 0.3 },
-      0.45
-    )
-    .fromTo(
-      ".career-item-dot",
-      { opacity: 0.12 },
-      { opacity: 1, duration: 0.3 },
-      0.65
-    )
-    .fromTo(
-      ".career-item-dot",
-      { opacity: 0.12 },
-      { opacity: 1, duration: 0.3 },
-      0.85
-    );
+
 
   if (window.innerWidth > 1024) {
     careerTimeline.fromTo(

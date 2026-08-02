@@ -13,7 +13,6 @@ const Career = () => {
             <div className="career-dot"></div>
           </div>
           <div className="career-info-box">
-            <div className="career-item-dot"></div>
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Algorithmic Trading</h4>
@@ -28,7 +27,6 @@ const Career = () => {
             </p>
           </div>
           <div className="career-info-box">
-            <div className="career-item-dot"></div>
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Web Development</h4>
@@ -43,7 +41,6 @@ const Career = () => {
             </p>
           </div>
           <div className="career-info-box">
-            <div className="career-item-dot"></div>
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Data Analysis</h4>
@@ -57,7 +54,6 @@ const Career = () => {
             </p>
           </div>
           <div className="career-info-box">
-            <div className="career-item-dot"></div>
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Branding, SEO & Marketing</h4>
@@ -72,7 +68,6 @@ const Career = () => {
             </p>
           </div>
           <div className="career-info-box">
-            <div className="career-item-dot"></div>
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Documentation & Data Entry</h4>
