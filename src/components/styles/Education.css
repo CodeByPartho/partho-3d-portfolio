@@ -53,9 +53,9 @@
 
 .education-info-in {
   display: flex;
-  width: 40%;
+  width: 55%;
   justify-content: space-between;
-  gap: 50px;
+  gap: 30px;
 }
 
 .education-info h3 {
@@ -67,11 +67,17 @@
 }
 
 .education-info h4 {
-  font-size: 33px;
+  font-size: 24px;
   line-height: 30px;
   letter-spacing: 0.8px;
   font-weight: 500;
   margin: 0;
+  display: inline;
+}
+
+.education-info h4 + h5 {
+  display: inline;
+  margin-left: 10px;
 }
 
 .education-info h5 {
@@ -152,11 +158,11 @@
   .education-info h4 {
     font-size: 22px;
     line-height: 24px;
-    width: 180px;
   }
 
   .education-info h5 {
     font-size: 17px;
+    display: inline;
   }
 
   .education-info h3 {
