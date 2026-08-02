@@ -52,7 +52,7 @@ const Navbar = () => {
           target="_blank"
           rel="noreferrer"
         >
-          github.com/CodeByPartho
+          GitHub
         </a>
         <ul>
           <li>
