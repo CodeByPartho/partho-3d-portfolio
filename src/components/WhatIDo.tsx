@@ -23,11 +23,11 @@ const CARDS = [
 ];
 
 const WhatIDo = () => {
-  // Only one card open at a time; null = all collapsed
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // All cards expanded by default; each toggles independently
+  const [openStates, setOpenStates] = useState<boolean[]>(CARDS.map(() => true));
 
   const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenStates((prev) => prev.map((v, i) => (i === index ? !v : v)));
   };
 
   return (
@@ -45,7 +45,7 @@ const WhatIDo = () => {
         <div className="what-accordion">
           <div className="what-corner"></div>
           {CARDS.map((card, index) => {
-            const isOpen = openIndex === index;
+            const isOpen = openStates[index];
             return (
               <div
                 key={index}
