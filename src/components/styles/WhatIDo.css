@@ -1,7 +1,8 @@
 /* ============================================================
-   WHAT I DO — proper layout
-   Cards stack in normal flow (flex column + gap).
-   Accordion expand/collapse via grid-template-rows trick.
+   WHAT I DO — accordion
+   One shared dashed border wraps the whole group.
+   Cards are normal flex-column children (no absolute / no fixed
+   pixel heights). Expand/collapse via grid-template-rows trick.
    ============================================================ */
 
 .whatIDO {
@@ -42,103 +43,157 @@
   color: var(--accentColor);
 }
 
-/* Parent container: flex column, consistent gap, auto height.
-   Cards push each other down naturally — no absolute offsets. */
-.what-box-in {
+/* ===== Accordion group =====
+   Shared dashed outline around ALL cards. Cards stack in normal
+   flex-column flow — each card's real height pushes the next down. */
+.what-accordion {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   width: 460px;
   max-width: 92vw;
-  height: auto;
-  position: relative;
-}
-
-/* Each card: normal block-level element in the column flow.
-   position: relative ONLY so corner brackets can anchor to it.
-   No absolute/fixed positioning of the card itself. */
-.what-content {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
   border: 1px dashed rgba(255, 255, 255, 0.4);
-  padding: 28px 30px;
+  padding: 6px 0;
+  position: relative; /* anchors the corner brackets */
   background: rgba(255, 255, 255, 0.02);
-  transition: border-color 0.4s ease, background 0.4s ease;
-  cursor: pointer;
 }
 
-.what-content:hover,
-.what-content-active {
-  border-color: var(--accentColor);
-  background: rgba(20, 184, 166, 0.04);
+/* Corner brackets: ┌ ┐ └ ┘ (shared, one per group) */
+.what-accordion::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 3px solid var(--accentColor);
+  border-right: 3px solid var(--accentColor);
+  pointer-events: none;
+  z-index: 2;
 }
 
-/* Corner brackets (decorative, anchored to card corners) */
 .what-corner {
   position: absolute;
   top: -2px;
   left: -2px;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-top: 3px solid var(--accentColor);
   border-left: 3px solid var(--accentColor);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.what-corner::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid var(--accentColor);
+  border-right: 3px solid var(--accentColor);
   pointer-events: none;
 }
 
 .what-corner::after {
   content: "";
   position: absolute;
-  bottom: -2px;
-  right: -2px;
-  width: 12px;
-  height: 12px;
+  bottom: -3px;
+  left: -3px;
+  width: 14px;
+  height: 14px;
   border-bottom: 3px solid var(--accentColor);
-  border-right: 3px solid var(--accentColor);
+  border-left: 3px solid var(--accentColor);
   pointer-events: none;
 }
 
-/* Header always visible */
-.what-header h3 {
-  margin: 0 0 6px;
-  font-size: 26px;
-  font-weight: 600;
+/* ===== Each card ===== */
+.what-content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.what-content:last-child {
+  border-bottom: none;
+}
+
+.what-content:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.what-content.open {
+  background: rgba(20, 184, 166, 0.04);
+}
+
+/* Header: title + subtitle + chevron */
+.what-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.what-header-text h3 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #eae5ec;
 }
 
-.what-header h4 {
-  margin: 0 0 14px;
-  font-size: 16px;
+.what-header-text h4 {
+  margin: 0;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.5px;
   color: var(--accentColor);
 }
 
-/* Collapsing wrapper — grid-template-rows trick.
-   overflow hidden ONLY here; content flows naturally when expanded. */
+/* Chevron toggle: points down (▼), rotates 180° when open (▲) */
+.what-chevron {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--accentColor);
+  transition: transform 0.3s ease;
+}
+
+.what-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* ===== Collapsing wrapper — grid-template-rows trick =====
+   overflow hidden ONLY on the inner element; the card's own box
+   grows to the real content height, pushing siblings down. */
 .what-collapse {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: grid-template-rows 0.3s ease;
+}
+
+.what-collapse.open {
+  grid-template-rows: 1fr;
 }
 
 .what-collapse-in {
   overflow: hidden;
   min-height: 0;
-}
-
-.what-noTouch:hover .what-collapse,
-.what-content-active .what-collapse {
-  grid-template-rows: 1fr;
+  padding-top: 14px;
 }
 
 /* Expanded content */
 .what-content p {
   font-size: 15px;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #adacac;
   margin: 0 0 16px;
 }
@@ -149,7 +204,7 @@
   font-size: 12px;
   letter-spacing: 1px;
   font-family: "Geist", sans-serif;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   text-transform: uppercase;
 }
 
@@ -158,6 +213,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  padding-bottom: 4px;
 }
 
 .what-tags {
@@ -172,25 +228,7 @@
   white-space: nowrap;
 }
 
-/* Expand arrow */
-.what-arrow {
-  position: absolute;
-  right: 24px;
-  top: 30px;
-  width: 18px;
-  height: 18px;
-  border-right: 2px solid var(--accentColor);
-  border-bottom: 2px solid var(--accentColor);
-  transform: rotate(45deg);
-  transition: transform 0.4s ease;
-}
-
-.what-noTouch:hover .what-arrow,
-.what-content-active .what-arrow {
-  transform: rotate(-135deg);
-}
-
-/* Mobile: full width, no overlap, no horizontal scroll */
+/* ===== Mobile (375px+) ===== */
 @media only screen and (max-width: 900px) {
   .whatIDO {
     flex-direction: column;
@@ -208,17 +246,12 @@
     font-size: 48px;
     line-height: 48px;
   }
-  .what-box-in {
+  .what-accordion {
     width: 100%;
     max-width: 100%;
-    margin-left: 0;
   }
   .what-content {
-    padding: 24px 20px;
-  }
-  .what-arrow {
-    right: 18px;
-    top: 26px;
+    padding: 18px 20px;
   }
 }
 
@@ -226,11 +259,11 @@
   .whatIDO {
     padding: 60px 12px;
   }
-  .what-header h3 {
-    font-size: 21px;
+  .what-header-text h3 {
+    font-size: 18px;
   }
-  .what-header h4 {
-    font-size: 14px;
+  .what-header-text h4 {
+    font-size: 13px;
   }
   .what-tags {
     font-size: 11.5px;
