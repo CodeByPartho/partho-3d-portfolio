@@ -57,12 +57,14 @@
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* Corner brackets: ┌ ┐ └ ┘ (shared, one per group) */
+/* Corner brackets: top-left + bottom-right, anchored to the
+   accordion container's own edges (no hardcoded pixel offsets).
+   Straddle the dashed border corners with a small negative offset. */
 .what-accordion::after {
   content: "";
   position: absolute;
-  bottom: -2px;
-  right: -2px;
+  bottom: -8px;
+  right: -8px;
   width: 14px;
   height: 14px;
   border-bottom: 3px solid var(--accentColor);
@@ -73,38 +75,14 @@
 
 .what-corner {
   position: absolute;
-  top: -2px;
-  left: -2px;
+  top: -8px;
+  left: -8px;
   width: 14px;
   height: 14px;
   border-top: 3px solid var(--accentColor);
   border-left: 3px solid var(--accentColor);
   pointer-events: none;
   z-index: 2;
-}
-
-.what-corner::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  right: -3px;
-  width: 14px;
-  height: 14px;
-  border-top: 3px solid var(--accentColor);
-  border-right: 3px solid var(--accentColor);
-  pointer-events: none;
-}
-
-.what-corner::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: -3px;
-  width: 14px;
-  height: 14px;
-  border-bottom: 3px solid var(--accentColor);
-  border-left: 3px solid var(--accentColor);
-  pointer-events: none;
 }
 
 /* ===== Each card ===== */
