@@ -2,6 +2,27 @@ import { useEffect, useRef } from "react";
 import "./styles/WhatIDo.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+const CARDS = [
+  {
+    title: "WEB DEVELOPMENT",
+    subtitle: "Building Clean, Modern Websites",
+    desc: "Crafting responsive, fast, and visually clean web experiences — from landing pages to full applications — with structure and attention to detail.",
+    tags: ["HTML & CSS", "JavaScript", "React", "Responsive design", "Netlify & Vercel"],
+  },
+  {
+    title: "ALGO TRADING & BOTS",
+    subtitle: "Automation That Works While You Sleep",
+    desc: "Designing and deploying automated trading systems — MQL5 Expert Advisors, Python bots, and data-driven strategies for forex, metals, and crypto markets.",
+    tags: ["MQL5 / MT5", "Python", "PineScript", "Alpaca API", "Backtesting", "Data analysis"],
+  },
+  {
+    title: "BRANDING & CONTENT",
+    subtitle: "Brand Identity, SEO & Marketing",
+    desc: "Designing brand identities, optimizing content for search, and running email marketing campaigns — helping businesses look professional and get found online.",
+    tags: ["Brand identity", "Logo design", "SEO", "Email marketing", "MS Word / Docs", "MS Excel / Sheets"],
+  },
+];
+
 const WhatIDo = () => {
   const containerRef = useRef<(HTMLDivElement | null)[]>([]);
   const setRef = (el: HTMLDivElement | null, index: number) => {
@@ -36,113 +57,33 @@ const WhatIDo = () => {
       </div>
       <div className="what-box">
         <div className="what-box-in">
-          <div className="what-border2">
-            <svg width="100%">
-              <line
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="100%"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="7,7"
-              />
-              <line
-                x1="100%"
-                y1="0"
-                x2="100%"
-                y2="100%"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="7,7"
-              />
-            </svg>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 0)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="100%"
-                  y2="0"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-
-            <div className="what-content-in">
-              <h3>WEB DEVELOPMENT</h3>
-              <h4>Building Clean, Modern Websites</h4>
-              <p>
-                Crafting responsive, fast, and visually clean web experiences —
-                from landing pages to full applications — with structure and
-                attention to detail.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">HTML &amp; CSS</div>
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Responsive design</div>
-                <div className="what-tags">Netlify &amp; Vercel</div>
+          {CARDS.map((card, index) => (
+            <div
+              key={index}
+              className="what-content what-noTouch"
+              ref={(el) => setRef(el, index)}
+            >
+              <div className="what-corner"></div>
+              <div className="what-header">
+                <h3>{card.title}</h3>
+                <h4>{card.subtitle}</h4>
+              </div>
+              <div className="what-collapse">
+                <div className="what-collapse-in">
+                  <p>{card.desc}</p>
+                  <h5>Skillset &amp; tools</h5>
+                  <div className="what-content-flex">
+                    {card.tags.map((tag, i) => (
+                      <div className="what-tags" key={i}>
+                        {tag}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
               <div className="what-arrow"></div>
             </div>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 1)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-            <div className="what-content-in">
-              <h3>ALGO TRADING &amp; BOTS</h3>
-              <h4>Automation That Works While You Sleep</h4>
-              <p>
-                Designing and deploying automated trading systems — MQL5 Expert
-                Advisors, Python bots, and data-driven strategies for forex,
-                metals, and crypto markets.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">MQL5 / MT5</div>
-                <div className="what-tags">Python</div>
-                <div className="what-tags">PineScript</div>
-                <div className="what-tags">Alpaca API</div>
-                <div className="what-tags">Backtesting</div>
-                <div className="what-tags">Data analysis</div>
-              </div>
-              <div className="what-arrow"></div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
