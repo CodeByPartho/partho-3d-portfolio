@@ -10,9 +10,7 @@
   left: 50%;
   transform: translateX(-50%);
   top: 0;
-  z-index: 100;
-  background-color: #0a0e17;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 9999;
 }
 .header ul {
   font-size: 12px;
