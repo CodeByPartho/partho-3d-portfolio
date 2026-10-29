@@ -1,5 +1,9 @@
 <div align="center">
 
+  <img src="assets/preview.png" width="100%" alt="Partho 3D Portfolio Banner" />
+
+  <br /><br />
+
   <h1>✨ Interactive 3D Developer Portfolio</h1>
 
   <p><b>Immersive personal web experience built with Three.js, React Three Fiber, and GSAP</b></p>
@@ -9,6 +13,7 @@
   </p>
 
   <p>
+    <a href="https://parthosarothipaik.netlify.app/"><img src="https://img.shields.io/badge/Live%20Demo-parthosarothipaik.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" /></a>
     <a href="https://react.dev"><img src="https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" /></a>
     <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" /></a>
     <a href="https://threejs.org"><img src="https://img.shields.io/badge/Three.js-0.168-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" /></a>
@@ -17,21 +22,17 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" /></a>
   </p>
 
-</div>
+  <h3>🌐 Live Demo: <a href="https://parthosarothipaik.netlify.app/">https://parthosarothipaik.netlify.app/</a></h3>
 
----
-
-## 📸 Preview
-
-<div align="center">
-  <img src="public/images/preview1.png" width="850" alt="3D Portfolio Interface Preview" />
 </div>
 
 ---
 
 ## 📖 Overview
 
-This repository contains the source code for an interactive 3D developer portfolio. It combines state-of-the-art WebGL graphics rendering with responsive UI design, integrating custom 3D character avatars, physics engines (Rapier/Cannon), and cinematic camera transitions controlled via GSAP timeline sequences.
+**Partho's 3D Portfolio** combines cutting-edge WebGL graphics rendering with responsive UI design, integrating custom 3D character avatars, physics engines (Rapier/Cannon), and cinematic camera transitions controlled via GSAP timeline sequences.
+
+Experience the live interactive website at **[https://parthosarothipaik.netlify.app/](https://parthosarothipaik.netlify.app/)**.
 
 All 3D assets are optimized with Draco compression for quick page hydration, providing fluid 60+ FPS navigation on both mobile and desktop screens.
 
