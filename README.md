@@ -4,7 +4,7 @@
 
   <br /><br />
 
-  <h1>✨ Interactive 3D Developer Portfolio</h1>
+  <h1>Interactive 3D Developer Portfolio</h1>
 
   <p><b>Immersive personal web experience built with Three.js, React Three Fiber, and GSAP</b></p>
 
@@ -22,13 +22,13 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" /></a>
   </p>
 
-  <h3>🌐 Live Demo: <a href="https://parthosarothipaik.netlify.app/">https://parthosarothipaik.netlify.app/</a></h3>
+  <h3>Live Demo: <a href="https://parthosarothipaik.netlify.app/">https://parthosarothipaik.netlify.app/</a></h3>
 
 </div>
 
 ---
 
-## 📖 Overview
+## Overview
 
 **Partho's 3D Portfolio** combines cutting-edge WebGL graphics rendering with responsive UI design, integrating custom 3D character avatars, physics engines (Rapier/Cannon), and cinematic camera transitions controlled via GSAP timeline sequences.
 
@@ -38,18 +38,18 @@ All 3D assets are optimized with Draco compression for quick page hydration, pro
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-- 🎮 **Real-Time 3D Rendering** — Interactive scenes powered by Three.js and `@react-three/fiber` featuring ambient lighting, custom materials, and shadow maps.
-- 🎬 **Cinematic Scroll Animations** — Timeline-synchronized transitions and camera path movements orchestrated with GreenSock (GSAP).
-- 🕹️ **Physics & Character Controller** — Real-time physics simulation using `@react-three/rapier` with collision boundaries and interactive cursor effects.
-- ⚡ **High-Speed Asset Pipeline** — Draco-compressed 3D mesh geometry (`.glb`) and WebP texture compression for fast asset streaming.
-- 📱 **Cross-Device Performance** — Adaptive pixel ratio scaling and responsive viewport calculation ensuring smooth frame rates on mobile hardware.
-- 🎨 **Modular Component Architecture** — Clean separation of 3D canvas components, HTML overlays, and reactive state stores.
+- **Real-Time 3D Rendering** — Interactive scenes powered by Three.js and `@react-three/fiber` featuring ambient lighting, custom materials, and shadow maps.
+- **Cinematic Scroll Animations** — Timeline-synchronized transitions and camera path movements orchestrated with GreenSock (GSAP).
+- **Physics & Character Controller** — Real-time physics simulation using `@react-three/rapier` with collision boundaries and interactive cursor effects.
+- **High-Speed Asset Pipeline** — Draco-compressed 3D mesh geometry (`.glb`) and WebP texture compression for fast asset streaming.
+- **Cross-Device Performance** — Adaptive pixel ratio scaling and responsive viewport calculation ensuring smooth frame rates on mobile hardware.
+- **Modular Component Architecture** — Clean separation of 3D canvas components, HTML overlays, and reactive state stores.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology | Purpose |
 | :--- | :--- | :--- |
@@ -63,7 +63,7 @@ All 3D assets are optimized with Draco compression for quick page hydration, pro
 
 ---
 
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Node.js**: `>= 18.x`
@@ -96,10 +96,10 @@ All 3D assets are optimized with Draco compression for quick page hydration, pro
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **[MIT License](LICENSE)**.
 
 ---
 
-<p align="center">Made with ❤️ by Partho</p>
+<p align="center">Built by Partho</p>
